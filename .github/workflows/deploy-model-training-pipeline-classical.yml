@@ -51,3 +51,5 @@ jobs:
       workspace_name: ${{ needs.get-config.outputs.aml_workspace }}
       parameters-file:  mlops/azureml/train/newpipeline.yml
       job-name: mlops-pipeline
+    secrets:
+      creds: ${{secrets.AZURE_CREDENTIALS}}
