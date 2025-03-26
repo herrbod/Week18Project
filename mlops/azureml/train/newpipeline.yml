@@ -48,7 +48,7 @@ jobs:
       test_data: ${{parent.jobs.prep_data.outputs.test_data}}
     outputs:
       model_output:
-        type: ${{parent.jobs.sweep_step.outputs.model_output}} # mlflow_model 
+        type: uri_folder # ${{parent.jobs.sweep_step.outputs.model_output}} # mlflow_model 
     sampling_algorithm: random  # Specify the sampling algorithm
     trial: ./train.yml  # Refers to a separate command component
     search_space:
